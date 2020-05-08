@@ -272,10 +272,10 @@ namespace FreeWorms
             if (MapImage != null)
                 ScreenManager.SpriteBatch.Draw(MapImage,  new Rectangle(0, 0, MapImage.Width, MapImage.Height), Color.White);
 
-            if (Map != null)
-                foreach (TerrainBlock block in Map.Terrain.Blocks)
-                 ScreenManager.SpriteBatch.Draw(Block, new Rectangle((int)block.Body.Position.X, (int)block.Body.Position.Y, 
-                    block.Rectangle.Width, block.Rectangle.Height), Color.White);
+            //if (Map != null)
+              //  foreach (TerrainBlock block in Map.Terrain.Blocks)
+                // ScreenManager.SpriteBatch.Draw(Block, new Rectangle((int)block.Body.Position.X, (int)block.Body.Position.Y, 
+                  //  block.Rectangle.Width, block.Rectangle.Height), Color.White);
                // ScreenManager.SpriteBatch.Draw(Block, new Rectangle((int)Map.Terrain.Boundary.Body.Position.X, (int)Map.Terrain.Boundary.Body.Position.Y, Map.Terrain.Image.Width, Map.Terrain.Image.Height), Color.White);
 
 

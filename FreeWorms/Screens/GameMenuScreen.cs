@@ -101,7 +101,7 @@ namespace FreeWorms
             if (MenuButtons[0].Bounds.Contains(Cursor))
                 DebugInfo = "Play singleplayer mode.";
             else
-                DebugInfo = "FreeFreeWorms Project 2019.";
+                DebugInfo = "FreeWorms Project 2020.";
 
 
         }

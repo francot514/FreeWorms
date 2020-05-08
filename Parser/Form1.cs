@@ -76,10 +76,11 @@ namespace Editor
             int id = listBox1.SelectedIndex;
             int count = 0;
 
+            
+
             if (id >= 0)
             {
-
-                for (int i = 0; i < DIR.Entries.Count; i++)
+                
                     if (DIR.Entries[id].sFileName.Contains("bnk"))       
                         {
                             using (Stream stream = new MemoryStream(DIR.Entries[id].Data, false))
@@ -97,7 +98,7 @@ namespace Editor
                                     listBox2.Items.Add("Sprite" + count);
                                    
 
-                                    Bitmap bmp = Frames[id].ToBitmap(ref Writer, new byte[255], false, Sprites[id].CropL, Sprites[id].CropU,
+                                    Bitmap bmp = Frames[id].ToBitmap(ref Writer, new byte[4], false, Sprites[id].CropL, Sprites[id].CropU,
                                         Sprites[id].CropR, Sprites[id].CropD);
 
                                     bmp.Save("newimage" + count + ".bmp");
@@ -117,8 +118,43 @@ namespace Editor
                         pictureBox1.BackgroundImage = img.Bitmap;
 
 
-                    }
 
+                    }
+                    else if (DIR.Entries[id].sFileName.Contains("spr"))
+                    {
+
+                        using (Stream stream = new MemoryStream(DIR.Entries[id].Data, false))
+                        {
+
+                            reader = new BinaryReader(stream);
+
+                            SPR spr = new SPR(reader, ref Sprites, ref Frames);
+                            BinaryWriter Writer = new BinaryWriter(new MemoryStream());
+
+
+
+                            foreach (Frame sp in Frames)
+                            {
+                                listBox2.Items.Add("Sprite" + count);
+
+                                Bitmap bmp = sp.ToBitmap(ref Writer, new byte[4], true, sp.CropL, sp.CropU,
+                                    sp.CropR, sp.CropD);
+                                
+
+                                    bmp.Save("newimage" + count + ".bmp");
+                                    count++;
+
+                                
+
+
+                            }
+
+                            label4.Text = Sprites.Count.ToString();
+                            label7.Text = Frames.Count.ToString();
+                        }
+
+
+                    }
 
             }
 
