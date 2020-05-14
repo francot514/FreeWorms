@@ -45,6 +45,9 @@ namespace FreeWorms.Data
             Body.BodyType = BodyType.Dynamic;
             Body.CollidesWith = Category.All;
             Body.CollisionCategories = Category.All;
+            Body.FixedRotation = true;
+
+          
 
             AnimState = AnimState.Idle;
 

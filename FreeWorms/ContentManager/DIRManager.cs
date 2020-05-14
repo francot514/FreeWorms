@@ -53,7 +53,7 @@ namespace FreeWorms.ContentManager
             for (int i = 0; i < GameDirs.Count; i++)
             {
 
-                Entries.AddRange(GameDirs[i].Entry);
+                Entries.AddRange(GameDirs[i].Entries);
             }
 
 

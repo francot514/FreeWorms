@@ -38,7 +38,7 @@ namespace FreeWorms.ContentManager
 
             MemoryStream Stream = new MemoryStream();
             //var Stream = File.OpenWrite("image.bmp");
-            Bmp.Save(Stream, System.Drawing.Imaging.ImageFormat.Png);
+            Bmp.Save(Stream, System.Drawing.Imaging.ImageFormat.Bmp);
 
             return Stream;
 
@@ -47,7 +47,7 @@ namespace FreeWorms.ContentManager
 
         public Texture2D GetImage(GraphicsDevice graphics, int index)
         {
-            Texture2D Image = new Texture2D(graphics, 0, 0);
+            Texture2D Image = new Texture2D(graphics, 1, 1);
 
             Image = Texture2D.FromStream(graphics, GetBitmap(index));
 

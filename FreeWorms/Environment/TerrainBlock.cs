@@ -20,6 +20,7 @@ namespace FreeWorms.Environment
 
             Body = body;
             Rectangle = rect;
+            
 
         }
 

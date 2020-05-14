@@ -22,7 +22,7 @@ namespace FreeWorms.Environment
        public Boundary Boundary;
        public World World;
        private StreamWriter writer;
-       
+
 
        public Terrain(World world, Texture2D image, System.Drawing.Bitmap bmp, int scale)
            {
@@ -46,17 +46,20 @@ namespace FreeWorms.Environment
             //width = width * 4;
             var data = Utils.GetPixels(Bitmap);
             var rectWidth = 0;
+           // var rectHeight = 5;
             var Fixture = new Fixture();
             Fixture.Friction = 1.0f;
             Fixture.Shape = new PolygonShape(1.0f);
+            
 
-            for (int yPos = y; yPos < height; yPos+= 1)
+            for (int yPos = y; yPos < height; yPos+= 5)
             {
                 rectWidth = 0;
 
                 for (var xPos = x; xPos < width; xPos+= 1)
                 {
-                    
+
+                    //if (data[xPos + (yPos * width)].A == 255)
                     if (data[xPos * yPos].G != 0 && data[xPos * yPos].B != 0 && data[xPos * yPos].R != 0) //if not alpha pixel
                     {
                         rectWidth++;
@@ -64,7 +67,7 @@ namespace FreeWorms.Environment
                         if (rectWidth >= width)
                         {
 
-                            CreateBlock(Fixture, 1, 1, xPos, yPos);
+                            CreateBlock(Fixture, rectWidth, 5, xPos, yPos);
                             rectWidth = 0;
                         }
 
@@ -75,7 +78,7 @@ namespace FreeWorms.Environment
                         
                         if (rectWidth > 1)
                         {
-                            CreateBlock(Fixture, rectWidth, 1, xPos, yPos);
+                            CreateBlock(Fixture, rectWidth, 5, xPos, yPos);
                             rectWidth = 0; //reset rect
                         }
                     }
@@ -83,24 +86,28 @@ namespace FreeWorms.Environment
                 }
             }
 
-            writer.Close();
+            //writer.Close();
 
         }
 
 
         private void CreateBlock(Fixture fix, int width, int height, int x, int y)
         {
+            
 
             var body = BodyFactory.CreateRectangle(World, width, height, 1.0f);
             body.IsStatic = true;
-            body.Position = new Vector2(x - (width / 4), y - height);
+            // body.Position = new Vector2(x - (width / 4), y - height);
+            body.Position = new Vector2(((x / 4) - (width / 2)), y - height);
+           
+            
             body.Restitution = 1.0f;
             body.CollidesWith = Category.All;
             body.CollisionCategories = Category.All;
 
             Blocks.Add(new TerrainBlock(body, new Rectangle(x,y, width, height)));
 
-            writer.WriteLine(x + "," + y + " " + width);
+            //writer.WriteLine(x + "," + y + " " + width);
 
             //body.CreateFixture(fix.Shape).Shape = new PolygonShape(1.0f);
 
