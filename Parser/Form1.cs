@@ -78,7 +78,7 @@ namespace Editor
 
             
 
-            if (id >= 0)
+            if (id >= 0 && DIR != null)
             {
                 
                     if (DIR.Entries[id].sFileName.Contains("bnk"))       
@@ -139,7 +139,8 @@ namespace Editor
 
                                 Bitmap bmp = sp.ToBitmap(ref Writer, new byte[4], true, sp.CropL, sp.CropU,
                                     sp.CropR, sp.CropD);
-                                
+
+                                    sp.Bitmap = bmp;
 
                                     bmp.Save("newimage" + count + ".bmp");
                                     count++;
@@ -167,7 +168,7 @@ namespace Editor
 
             if (id >= 0)
             {
-
+                if (Frames != null)
                 for (int i = 0; i < Frames.Count; i++)
                     if (Frames[id].Size > 0)
                         pictureBox1.BackgroundImage = Frames[id].Bitmap;
