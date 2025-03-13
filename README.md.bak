@@ -17,13 +17,5 @@ OpenGL 3.0
 
 SDL2 
 
-# Build
-
-Use Visual Studio 2017 or higher. Mono for Linux. Run FreeWorms.sln to build.
-
-# Installation
-
-Original game files needed, run into game folder directory. 
-
 # License
 This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at http://mozilla.org/MPL/2.0/.
