@@ -32,7 +32,7 @@ namespace FarseerPhysics
         public const float Pi = 3.14159265359f;
 
         // Common
-
+        public const float Gravity = 9.8f;
         /// <summary>
         /// If true, all collision callbacks have to return the same value, and agree
         /// if there was a collision or not. Swtich this to false to revert to the 
