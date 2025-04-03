@@ -28,7 +28,7 @@ namespace Editor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            CurrentDir = AppDomain.CurrentDomain.BaseDirectory;
         }
 
         private void ParseDIR(string path)
@@ -75,7 +75,7 @@ namespace Editor
 
             int id = listBox1.SelectedIndex;
             int count = 0;
-
+            CurrentDir = CurrentDir + listBox1.SelectedItem.ToString();
             
 
             if (id >= 0 && DIR != null)
