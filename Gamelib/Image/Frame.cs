@@ -103,7 +103,9 @@ namespace Gamelib.Image
                 {
                     if (((k >= (this.CropL - NewCropL)) && (k < (this.CropR - NewCropL))) && ((j >= (this.CropU - NewCropU)) && (j < (this.CropD - NewCropU))))
                     {
-                        b.Write(this.Data[((j - (this.CropU - NewCropU)) * this.Width) + (k - (this.CropL - NewCropL))]);
+                        int size = ((j - (this.CropU - NewCropU)) * this.Width) + (k - (this.CropL - NewCropL));
+                        if (Data.Length > size)
+                        b.Write(this.Data[size]);
                     }
                     else
                     {
