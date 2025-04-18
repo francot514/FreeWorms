@@ -72,7 +72,7 @@ namespace Editor
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            listBox2.Items.Clear();
             int id = listBox1.SelectedIndex;
             int count = 0;
             CurrentDir = CurrentDir + listBox1.SelectedItem.ToString();
@@ -163,15 +163,15 @@ namespace Editor
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int id = listBox1.SelectedIndex;
+            int id = listBox2.SelectedIndex;
            
 
             if (id >= 0)
             {
                 if (Frames != null)
                 for (int i = 0; i < Frames.Count; i++)
-                    if (Frames[id].Size > 0)
-                        pictureBox1.BackgroundImage = Frames[id].Bitmap;
+                    if (Frames[i].Size > 0)
+                        pictureBox1.BackgroundImage = Frames[i].Bitmap;
 
 
             }
