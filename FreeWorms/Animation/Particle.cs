@@ -11,8 +11,8 @@ namespace FreeWorms.Animation
     {
 
 
-        public Vector2 initialPos, initialVel;
-
+        public Vector2 initialPos, initialVel, position, velocity;
+        public int WorldHeight;
         public Random Random = new Random();
 
         public Particle(string name, SpriteImage sprite, bool loop):  base(name, sprite, loop)
@@ -26,7 +26,7 @@ namespace FreeWorms.Animation
 
             }
 
-        public void physics()
+        public void Startphysics()
         {
             var t = 0.016;
             var g = new Vector2((float)0, (float)9.81);
@@ -45,7 +45,7 @@ namespace FreeWorms.Animation
 
                base.Update(gametime);
 
-               physics();
+               Startphysics();
 
                 if (this.getCurrentFrame() >= this.getTotalFrames()-1)
                 {
@@ -59,7 +59,14 @@ namespace FreeWorms.Animation
                 this.frameIncremeter *= -1;
                 }
 
-           }
+            this.position.X += this.velocity.X;
+
+            if (this.position.X > WorldHeight)
+            {
+                this.position.X = 0;
+            }
+
+        }
 
 
     }
