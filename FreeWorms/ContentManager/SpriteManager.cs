@@ -1,4 +1,6 @@
-﻿using Gamelib.Image;
+﻿
+using Gamelib.Image;
+using FreeWorms.Animation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,13 +15,14 @@ namespace FreeWorms.ContentManager
         
         public List<Sprite> Sprites;
         public List<Frame> Frames;
+        public List<Particle> Particles;
 
-        public SpriteManager()
+      public SpriteManager()
         {
 
             Sprites = new List<Sprite>();
             Frames = new List<Frame>();
-
+            Particles = new List<Particle>();
         }
 
 
