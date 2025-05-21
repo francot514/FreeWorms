@@ -55,6 +55,10 @@ namespace Gamelib.Common
 
         public static int DirHash(byte[] Data)
         {
+
+            if (Data[0] == 0)
+            return Data[0];
+
             return 0;
         }
 
