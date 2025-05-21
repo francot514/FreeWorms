@@ -122,16 +122,16 @@ namespace Editor
                     }
                     else if (DIR.Entries[id].sFileName.Contains("spr"))
                     {
-
-                        using (Stream stream = new MemoryStream(DIR.Entries[id].Data, false))
+                        byte[] Data = DIR.Entries[id].Data;
+                        using (Stream stream = new MemoryStream(Data, false))
                         {
 
                             reader = new BinaryReader(stream);
 
                             SPR spr = new SPR(reader, ref Sprites, ref Frames);
                             BinaryWriter Writer = new BinaryWriter(new MemoryStream());
-
-
+                            Writer.Write(Data, 0, Data.Length);
+                            Writer.Close();
 
                             foreach (Frame sp in Frames)
                             {
