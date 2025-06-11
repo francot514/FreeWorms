@@ -9,7 +9,7 @@ Start game and load any mission file to test or change in game configurations wi
 
 MonoGame: 3.6 or higher
 
-OpenTK 1.2
+OpenAL 1.0 or higher
 
 -Linux
 
