@@ -130,8 +130,8 @@ namespace Editor
 
                             SPR spr = new SPR(reader, ref Sprites, ref Frames);
                             BinaryWriter Writer = new BinaryWriter(new MemoryStream());
-                            Writer.Write(Data, 0, Data.Length);
-                            Writer.Close();
+                            //Writer.Write(Data, 0, Data.Length);
+                            //Writer.Close();
 
                             foreach (Frame sp in Frames)
                             {
