@@ -103,6 +103,7 @@ namespace FarseerPhysics
         /// Enable/Disable sleeping
         /// </summary>
         public static bool AllowSleep = true;
+        public static bool AlwaysSleep = false;
 
         /// <summary>
         /// The maximum number of vertices on a convex polygon.
