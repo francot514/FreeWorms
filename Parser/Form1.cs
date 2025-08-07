@@ -170,8 +170,8 @@ namespace Editor
             {
                 if (Frames != null)
                 for (int i = 0; i < Frames.Count; i++)
-                    if (Frames[i].Size > 0)
-                        pictureBox1.BackgroundImage = Frames[i].Bitmap;
+                    if (Frames[id].Size > 0)
+                        pictureBox1.BackgroundImage = Frames[id].Bitmap;
 
 
             }
@@ -180,3 +180,4 @@ namespace Editor
         }
     }
 }
+
