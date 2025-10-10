@@ -8,6 +8,7 @@ namespace FarseerPhysics.Common
     public class HashSet<T> : ICollection<T>
     {
         private Dictionary<T, byte> _dict;
+        private bool isRead;
 
         public HashSet(int capacity)
         {
@@ -69,7 +70,7 @@ namespace FarseerPhysics.Common
 
         public bool IsReadOnly
         {
-            get { return false; }
+            get { return isRead; }
         }
 
         #endregion
