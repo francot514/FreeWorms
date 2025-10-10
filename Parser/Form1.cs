@@ -64,7 +64,7 @@ namespace Editor
             if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
-                CurrentDir = null;
+                CurrentDir = string.Empty;
                 ParseDIR(openFileDialog1.FileName);
 
             }
@@ -90,7 +90,7 @@ namespace Editor
 
                                 BNK bnk = new BNK(reader, ref Sprites, ref Frames);
                             BinaryWriter Writer = new BinaryWriter(new MemoryStream());
-
+                            //Writer.Write(Data, 0, Data.Length);
 
 
                                 foreach (Frame spr in Frames)
@@ -130,7 +130,7 @@ namespace Editor
 
                             SPR spr = new SPR(reader, ref Sprites, ref Frames);
                             BinaryWriter Writer = new BinaryWriter(new MemoryStream());
-                            //Writer.Write(Data, 0, Data.Length);
+                            
                             //Writer.Close();
 
                             foreach (Frame sp in Frames)
@@ -180,4 +180,5 @@ namespace Editor
         }
     }
 }
+
 
