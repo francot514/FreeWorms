@@ -36,6 +36,13 @@ namespace FarseerPhysics.Collision
         Face = 1,
     }
 
+    public static class CollisionSettings
+    {
+
+        public static bool EnableCollision = true;
+
+
+    }
     /// <summary>
     /// The features that intersect to form the contact point
     /// This must be 4 bytes or less.

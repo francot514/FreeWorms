@@ -40,6 +40,8 @@ namespace FarseerPhysics
         /// </summary>
         public const bool AllCollisionCallbacksAgree = true;
 
+        public const bool EnableActivation = true;
+
         /// <summary>
         /// Enabling diagnistics causes the engine to gather timing information.
         /// You can see how much time it took to solve the contacts, solve CCD
