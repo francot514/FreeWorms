@@ -15,7 +15,7 @@ namespace FreeWorms
 
         public static Texture2D GetTexture(GraphicsDevice graphic, string file)
         {
-            Texture2D Texture = new Texture2D(graphic, 0, 0);
+            Texture2D Texture = new Texture2D(graphic, 1, 1);
 
             if (File.Exists(file))
                 Texture = Texture2D.FromStream(graphic, File.Open(file, FileMode.Open));

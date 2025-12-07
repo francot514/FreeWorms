@@ -20,7 +20,7 @@ namespace FreeWorms
         
 
         public WormsGame()
-        {
+        {   
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreferredBackBufferWidth = Global.SCREEN_WIDTH;

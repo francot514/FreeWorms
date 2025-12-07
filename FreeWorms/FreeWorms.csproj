@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -14,7 +14,7 @@
     <MonoGamePlatform>Linux</MonoGamePlatform>
     <MonoGameContentBuilderExe>
     </MonoGameContentBuilderExe>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -51,12 +51,12 @@
     <Compile Include="ContentManager\EffectManager.cs" />
     <Compile Include="ContentManager\GameContent.cs" />
     <Compile Include="ContentManager\ImageManager.cs" />
-    <Compile Include="ContentManager\SoundManager.cs" />
     <Compile Include="ContentManager\SpriteManager.cs" />
     <Compile Include="Data\Player.cs" />
     <Compile Include="Data\Team.cs" />
     <Compile Include="Data\Worm.cs" />
     <Compile Include="Environment\Boundary.cs" />
+    <Compile Include="Environment\Explosion.cs" />
     <Compile Include="Environment\Map.cs" />
     <Compile Include="Environment\Terrain.cs" />
     <Compile Include="Environment\TerrainBlock.cs" />
@@ -90,7 +90,7 @@
   <ItemGroup>
     <Reference Include="MonoGame.Framework, Version=3.6.0.1625, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\MonoGame.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />

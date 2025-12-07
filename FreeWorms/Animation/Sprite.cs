@@ -12,7 +12,7 @@ namespace FreeWorms.Animation
     {
 
         public string Name;
-        public int Frames, MsPerFrame, frameIncremeter;
+        public int Frames, MsPerFrame, frameIncremeter, frameY;
         public Texture2D Texture;
         public Vector2 Position;
 

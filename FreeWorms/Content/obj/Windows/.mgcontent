@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Fonts/Hud.spritefont</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Fonts/Menu.spritefont</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Interface/blank.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Interface/gradient.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Interface/Menu.bmp</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Interface/Die.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Interface/Lose.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Interface/Win.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Sprites/widle.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Sprites/wwalk.png</File>
+    <File>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Sprites/rect.png</File>
+  </SourceFiles>
+</SourceFileCollection>
