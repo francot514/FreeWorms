@@ -33,7 +33,7 @@ namespace FreeWorms.Environment
                Scale = scale;
                Offset = new Vector2(2300, 1300);
                Bounds = new Rectangle(0, 0, image.Width, image.Height);
-              // Boundary = new Boundary(world, image.Width, image.Height);
+               Boundary = new Boundary(world, image.Width, image.Height);
                Blocks = new List<TerrainBlock>();
 
                CreateTerrainPhysics(0, 0, image.Width, image.Height, world, scale);
@@ -55,30 +55,31 @@ namespace FreeWorms.Environment
             for (int yPos = y; yPos < height; yPos+= 5)
             {
                 rectWidth = 0;
-
-                for (var xPos = x; xPos < width; xPos+= 1)
+                
+                for (var xPos = x; xPos < width; xPos+= 4)
                 {
 
-                    //if (data[xPos + (yPos * width)].A == 255)
-                    if (data[xPos * yPos].G != 0 && data[xPos * yPos].B != 0 && data[xPos * yPos].R != 0) //if not alpha pixel
+                    //if (data[xPos * yPos    ].A == 255)
+                      if (data[xPos * yPos ].G != 0 && data[xPos * yPos].B != 0 && data[xPos * yPos].R != 0) //if not alpha pixel
                     {
+
                         rectWidth++;
 
                         if (rectWidth >= width)
                         {
 
-                            CreateBlock(Fixture, rectWidth, 5, xPos, yPos);
-                            rectWidth = 0;
-                        }
+                             CreateBlock(Fixture, rectWidth, 1, xPos, yPos);
+                             rectWidth = 0;
+                        } 
 
 
                     }
                     else 
                     {
                         
-                        if (rectWidth > 1)
+                         if (rectWidth > 1)
                         {
-                            CreateBlock(Fixture, rectWidth, 5, xPos, yPos);
+                             CreateBlock(Fixture, rectWidth, 1, xPos, yPos);
                             rectWidth = 0; //reset rect
                         }
                     }
@@ -94,20 +95,20 @@ namespace FreeWorms.Environment
         private void CreateBlock(Fixture fix, int width, int height, int x, int y)
         {
             
-
-            var body = BodyFactory.CreateRectangle(World, width, height, 1.0f);
+           
+            var body = BodyFactory.CreateRectangle(World, width,  height , 1.0f);
             body.IsStatic = true;
             // body.Position = new Vector2(x - (width / 4), y - height);
-            body.Position = new Vector2(((x / 4) - (width / 2)), y - height);
-           
-            
+             body.Position = new Vector2(((x / 4) - (width / 2)  / Scale ), y - height / Scale);
+             // body.Position = new Vector2(( x   / Scale), y   / Scale);
+
             body.Restitution = 1.0f;
             body.CollidesWith = Category.All;
             body.CollisionCategories = Category.All;
 
             Blocks.Add(new TerrainBlock(body, new Rectangle(x,y, width, height)));
 
-            //writer.WriteLine(x + "," + y + " " + width);
+             //writer.WriteLine(x + "," + y + " " + width);
 
             //body.CreateFixture(fix.Shape).Shape = new PolygonShape(1.0f);
 

@@ -26,7 +26,7 @@ namespace FreeWorms
         static Speed currentSpeed = Speed.Normal;
         static string[] languages = {
 			"English",
-			"Spanis"
+			"Spanish"
 		};
 
         static int currentLanguage = 0;

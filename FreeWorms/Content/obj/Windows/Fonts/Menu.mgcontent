@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/Fonts/Menu.spritefont</SourceFile>
+  <SourceTime>2020-05-14T09:38:12-05:00</SourceTime>
+  <DestFile>C:/Users/tote5/OneDrive/Documentos/Visual Studio 2017/Projects/FreeWorms-master/FreeWorms/Content/bin/Windows/Fonts/Menu.xnb</DestFile>
+  <DestTime>2022-10-12T12:29:32.0678552-05:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2017-03-01T10:05:36-05:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2017-03-01T10:05:36-05:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

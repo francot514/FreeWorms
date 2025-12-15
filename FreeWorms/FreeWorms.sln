@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamelib", "..\Gamelib\Gamel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Physics", "..\Physics\Physics.csproj", "{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "..\Parser\Parser.csproj", "{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,14 @@ Global
 		{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}.Release|x86.ActiveCfg = Release|Any CPU
 		{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}.Release|x86.Build.0 = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|x86.Build.0 = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|x86.ActiveCfg = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

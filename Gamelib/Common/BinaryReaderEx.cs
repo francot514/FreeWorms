@@ -47,7 +47,7 @@ namespace Gamelib.Common
             }
             if (format == BinaryStringFormat.NoPrefixOrTermination)
             {
-                throw new ArgumentException("NoPrefixOrTermination cannot be used for read operations.");
+                throw new ArgumentException("NoPrefixOrTermination cannot be used for read operations. Specify the length of the string instead to read strings with no prefix or terminator.");
             }
             throw new ArgumentOutOfRangeException("The specified binary string format is invalid.");
         }
