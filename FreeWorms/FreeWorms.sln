@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1758
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeWorms", "FreeWorms.csproj", "{F736C706-1FA8-4C20-B933-FAE99E6217F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamelib", "..\Gamelib\Gamelib.csproj", "{93F06753-3BF8-4FD9-BA52-338EF6E9AAFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Physics", "..\Physics\Physics.csproj", "{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "..\Parser\Parser.csproj", "{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,14 @@ Global
 		{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}.Release|x86.ActiveCfg = Release|Any CPU
 		{C6DB4CC2-D5C5-4A50-8691-F3311AE522DE}.Release|x86.Build.0 = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Debug|x86.Build.0 = Debug|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|x86.ActiveCfg = Release|Any CPU
+		{42D1C859-C2B9-486D-8CA0-BDDDB57DE547}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
