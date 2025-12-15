@@ -26,7 +26,6 @@ namespace FreeWorms.Data
         public Team Team;
         public Animation.Animation Animation;
         public AnimState AnimState;
-        public bool IsDead;
 
         public Worm(Team team, int id, int x, int y)
         {
@@ -36,7 +35,6 @@ namespace FreeWorms.Data
             Health = 100;
             Start = new Point(x, y);
             Current = Start;
-            IsDead = false;
 
             var Fixture = new Fixture();
             Fixture.Friction = 1.0f;
