@@ -173,6 +173,8 @@ namespace Editor
                     if (Frames[id].Size > 0)
                         pictureBox1.BackgroundImage = Frames[id].Bitmap;
 
+                if (Sprites != null)
+                   label8.Text = Sprites[id].FrameCount.ToString();
 
             }
 
