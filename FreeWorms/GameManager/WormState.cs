@@ -10,11 +10,13 @@ namespace FreeWorms.GameManager
     {
 
         public List<Worm> Worms;
+        public List<Worm> DeadWorms;
 
         public WormState(Player[] players)
         {
 
             Worms = new List<Worm>();
+            DeadWorms = new List<Worm>();
 
             for (int i = 0; i < players.Length; i++)
             {
@@ -28,5 +30,20 @@ namespace FreeWorms.GameManager
 
         }
 
+        public bool isDead(Worm worm)
+        {
+           if (worm.IsDead)
+            {
+
+                DeadWorms.Add(worm);
+                return true;
+
+
+            }
+
+            return false;
+        }
+
     }
+
 }
