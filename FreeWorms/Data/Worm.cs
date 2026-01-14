@@ -26,6 +26,7 @@ namespace FreeWorms.Data
         public Team Team;
         public Animation.Animation Animation;
         public AnimState AnimState;
+        public bool IsDead;
 
         public Worm(Team team, int id, int x, int y)
         {
@@ -35,6 +36,7 @@ namespace FreeWorms.Data
             Health = 100;
             Start = new Point(x, y);
             Current = Start;
+            IsDead = false;
 
             var Fixture = new Fixture();
             Fixture.Friction = 1.0f;
@@ -88,7 +90,9 @@ namespace FreeWorms.Data
                     Body.Position = new Vector2(Start.X + 1, Start.Y);
 
             }
-          
+
+            if (IsDead)
+                Body.Position = new Vector2(1024, 1024);
 
         }
 
@@ -98,7 +102,7 @@ namespace FreeWorms.Data
 
         public void Draw(SpriteBatch sbatch)
         {
-            if (Animation != null)
+            if (Animation != null && !IsDead)
                 Animation.Draw(sbatch, (int)Body.Position.X, (int)Body.Position.Y);
        
 
