@@ -14,7 +14,7 @@ namespace Editor
 {
     public partial class Form1 : Form
     {
-
+        private List<string> Names;
         private string CurrentDir;
         private BinaryReader reader;
         private List<Sprite> Sprites;
@@ -24,6 +24,7 @@ namespace Editor
         public Form1()
         {
             InitializeComponent();
+            Names = new List<string>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace Editor
                 listBox1.Items.Add(entry.sFileName);
 
                
-
+                Names.Add(entry.sFileName);
             }
 
             label2.Text = DIR.Entries.Count.ToString();
