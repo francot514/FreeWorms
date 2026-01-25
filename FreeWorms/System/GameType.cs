@@ -8,8 +8,9 @@ namespace FreeWorms
     public enum GameType
     {
 
-        ONLINE_GAME = 0,
-        LOCAL_GAME= 1
+        NO_GAME = 0,
+        LOCAL_GAME= 1,
+        ONLINE_GAME = 2
 
     }
 }
