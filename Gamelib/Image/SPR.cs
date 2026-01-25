@@ -107,7 +107,7 @@ namespace Gamelib.Image
                 {
                     for (int num11 = 0; num11 < iFrame[num10].Size; num11++)
                     {
-                        //if (streamArray[iFrame[num10].Stream].Data[(iFrame[num10].Position - 1) + num11] <= streamArray[iFrame[num10].Stream].Data.Length)
+                        if (streamArray[iFrame[num10].Stream].Data[(iFrame[num10].Position - 1) + num11] <= streamArray[iFrame[num10].Stream].Data.Length)
                         iFrame[num10].Data[num11] = streamArray[iFrame[num10].Stream].Data[(iFrame[num10].Position) + num11];
                     }
                 }
