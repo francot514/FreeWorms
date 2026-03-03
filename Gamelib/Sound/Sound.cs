@@ -10,6 +10,15 @@ namespace Gamelib.Sound
     public class SoundEffect
     {
         public SoundEffectInstance Instance;
+        public bool Loop, Finished;
+
+        public SoundEffect(){
+
+                Loop = false;
+                Finished = false;
+
+            }
+            
     }
 }
  
