@@ -36,7 +36,7 @@ namespace FreeWorms
         private float pauseAlpha;
         // Meta-Maze game state.
 
-        private bool wasContinuePressed;
+        private bool wasContinuePressed, isActivated;
 
         private GamePadState gamePadState;
         private KeyboardState keyboardState;
@@ -230,6 +230,8 @@ namespace FreeWorms
                     {
                         
                         Players[CurrentPlayer].HandleInput(keyboardState, gamePadState);
+						if (Players[CurrentPlayer].Team.Worms[0].Alive)
+							isActivated = true;
 
                     }
 
