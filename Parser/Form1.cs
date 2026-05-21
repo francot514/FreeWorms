@@ -185,6 +185,7 @@ namespace Editor
         private void configToolStripMenuItem_Click(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            listBox2.Items.Clear();
         }
     }
 }
