@@ -25,7 +25,7 @@ public class ScreenManager : DrawableGameComponent
     private Texture2D blankTexture;
 
     private bool isInitialized;
-    private bool m_traceEnabled;
+    private bool m_traceEnabled  = false;
     public readonly GameServiceContainer services;
     public readonly Microsoft.Xna.Framework.Content.ContentManager content;
     #endregion
