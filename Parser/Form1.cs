@@ -58,14 +58,14 @@ namespace Editor
             listBox1.Items.Clear();
             listBox2.Items.Clear();
 
-            openFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            openFileDialog1.InitialDirectory = CurrentDir;
             openFileDialog1.Filter = "Worms DIR(*.dir)|*.dir|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
 
             if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
-                CurrentDir = string.Empty;
+                CurrentDir = openFileDialog1.FileName;
                 ParseDIR(openFileDialog1.FileName);
 
             }
