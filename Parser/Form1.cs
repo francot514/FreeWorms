@@ -64,7 +64,7 @@ namespace Editor
             if (this.openFileDialog1.ShowDialog() == DialogResult.OK)
             {
 
-                CurrentDir = null;
+                CurrentDir = openFileDialog1.InitialDirectory;
                 ParseDIR(openFileDialog1.FileName);
 
             }
