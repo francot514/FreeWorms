@@ -11,13 +11,24 @@ namespace Gamelib.Sound
     {
         public SoundEffectInstance Instance;
         public bool Loop, Finished;
+		public int Volume = 0;
 
-        public SoundEffect(){
+
+        public SoundEffect(SoundEffectInstance instance)
+		{
 
                 Loop = false;
                 Finished = false;
+				Instance = instance;
+				Volume = 10;
+				
 
-            }
+        }
+			
+		public void SetLoop(bool loop)
+        {
+            Loop = loop;
+        }
             
     }
 }
