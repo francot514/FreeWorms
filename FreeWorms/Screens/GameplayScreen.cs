@@ -230,7 +230,7 @@ namespace FreeWorms
                     {
                         
                         Players[CurrentPlayer].HandleInput(keyboardState, gamePadState);
-						if (Players[CurrentPlayer].Team.Worms[0].Alive)
+						if (Players[CurrentPlayer].Team.Worms[0].IsDead)
 							isActivated = true;
 
                     }
